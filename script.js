@@ -14,12 +14,12 @@ document.querySelector('.check').addEventListener('click', function () {
 
   // When there is no input
   if (!guess) {
-    // document.querySelector('.message').textContent = '⛔️ No number!';
+    // document.querySelector('.message').textContent = '⛔️ No number!'; --> keep the code dry
     displayMessage('⛔️ No number!');
 
     // When player wins
   } else if (guess === secretNumber) {
-    // document.querySelector('.message').textContent = '🎉 Correct Number!';
+    // document.querySelector('.message').textContent = '🎉 Correct Number!'; --> keep the code dry
     displayMessage('🎉 Correct Number!');
     document.querySelector('.number').textContent = secretNumber;
 
@@ -34,13 +34,13 @@ document.querySelector('.check').addEventListener('click', function () {
     // When guess is wrong
   } else if (guess !== secretNumber) {
     if (score > 1) {
-      // document.querySelector('.message').textContent =
+      // document.querySelector('.message').textContent =  --> keep the code dry
       // guess > secretNumber ? '📈 Too high!' : '📉 Too low!';
       displayMessage(guess > secretNumber ? '📈 Too high!' : '📉 Too low!');
       score--;
       document.querySelector('.score').textContent = score;
     } else {
-      // document.querySelector('.message').textContent = '💥 You lost the game!';
+      // document.querySelector('.message').textContent = '💥 You lost the game!';  --> keep the code dry
       displayMessage('💥 You lost the game!');
       document.querySelector('.score').textContent = 0;
     }
@@ -51,7 +51,7 @@ document.querySelector('.again').addEventListener('click', function () {
   score = 20;
   secretNumber = Math.trunc(Math.random() * 20) + 1;
 
-  // document.querySelector('.message').textContent = 'Start guessing...';
+  // document.querySelector('.message').textContent = 'Start guessing...';  --> keep the code dry
   displayMessage('Start guessing...');
   document.querySelector('.score').textContent = score;
   document.querySelector('.number').textContent = '?';
